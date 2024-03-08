@@ -14,8 +14,8 @@ abstract class Servidor implements Interfaz {
                 Sobrescribir opcionalmente los métodos que escribimos en la interfaz
             */
             @Override
-            public float sumar(float numero1, float numero2) throws RemoteException {
-                return numero1 + numero2;
+            public float sumar(float numero1, float numero2,float numero3) throws RemoteException {
+                return numero1 + numero2 + numero3;
             };
 
             @Override
@@ -27,6 +27,11 @@ abstract class Servidor implements Interfaz {
             public float multiplicar(float numero1, float numero2) throws RemoteException {
                 return numero1 + numero2;
             };
+
+            @Override
+            public float raiz_cuadrada(float numero1) throws RemoteException{
+                return (float) Math.sqrt(numero1);
+            }
 
             @Override
             public float dividir(float numero1, float numero2) throws RemoteException {
