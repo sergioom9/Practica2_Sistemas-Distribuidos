@@ -1,11 +1,11 @@
 // Sergio Martin y Gonzalo Vazquez
-
+package main;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
-abstract class Cliente implements Interfaz {
+abstract class Cliente{
     private static final String IP = "127.0.0.1"; // Puedes cambiar a localhost
     private static final int PUERTO = 1500; //Si cambias aquí el puerto, recuerda cambiarlo en el servidor
 

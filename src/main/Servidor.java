@@ -1,12 +1,12 @@
 // Sergio Martin y Gonzalo Vazquez
-
+package main;
 import java.rmi.AlreadyBoundException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-abstract class Servidor implements Interfaz {
+public class Servidor{
     private static final int PUERTO = 1500; //Si cambias aquí el puerto, recuerda cambiarlo en el cliente
     public static void main(String[] args) throws RemoteException, AlreadyBoundException {
         Remote remote = UnicastRemoteObject.exportObject(new Interfaz() {
@@ -25,7 +25,7 @@ abstract class Servidor implements Interfaz {
 
             @Override
             public float multiplicar(float numero1, float numero2) throws RemoteException {
-                return numero1 + numero2;
+                return numero1 * numero2;
             };
 
             @Override
